@@ -1,0 +1,125 @@
+<html>
+    <head>
+        <title>Reservation</title>
+        <style>
+          .logo img
+         {
+             float: left;
+             width:100px;
+             height: 100px;
+         }
+        </style>
+        <style>
+            body{
+            background-image: url('resv.jpg');
+            background-repeat: no-repeat;
+            background-attachment: fixed;  
+            background-position: center; 
+            background-size: 100% 90%;
+            }
+        </style>  
+        
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <style>
+            .fa {
+              padding: 20px;
+              font-size: 30px;
+              width: 50px;
+              text-align: center;
+              text-decoration: none;
+              margin: 5px 2px;
+            }
+            
+            .fa:hover {
+                opacity: 1;
+                background-color: #7b8586;
+            }
+            
+            .fa-facebook {
+              color: #3B5998;
+            }
+            
+            .fa-twitter {
+              color: #55ACEE;
+            }
+            
+            .fa-google {
+              color: #dd4b39;
+            }
+            
+            .fa-youtube {
+              color: #bb0000;
+            }
+            
+            .fa-instagram {
+              color: #B5589E;
+            }
+            
+            </style>      
+    </head>
+    <body>
+      <div class="logo">
+        <a href="http://127.0.0.1:5500/public/Index/Index.html"><img src="logo.png" alt="logo"></a>
+     </div>  
+        <center>
+            <h1 background style="background-color: #717475;">Harshi's Multicusine Restarunts</h1>
+            <br><br><br>
+    <strong>        
+        <form action="reservation.php" method="post">
+            <div class="elem-group">
+              <label for="name" style="color:#f1eded;">Your Name</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <input type="text" id="name" name="visitor_name" placeholder="Sankar" pattern=[A-Z\sa-z]{3,20} required>
+            </div><br><br>
+            <div class="elem-group">
+              <label for="email" style="color:#f1eded;">Your E-mail</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <input type="email" id="email" name="visitor_email" placeholder="sankar@gmail.com" required>
+            </div><br><br>
+            <div class="elem-group">
+              <label for="phone" style="color:#f1eded;">Your Phone</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <input type="tel" id="phone" name="visitor_phone" placeholder="45548 85555" pattern=(\d{3})-?\s?(\d{3})-?\s?(\d{4}) required>
+            </div><br><br>
+            <div class="elem-group inlined">
+              <label for="adult" style="color:#f1eded;">Adults</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <input type="number" id="adult" name="total_adults" placeholder="*" min="1" required>
+            </div><br><br>
+            <div class="elem-group inlined">
+              <label for="child" style="color:#f1eded;">Children</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <input type="number" id="child" name="total_children" placeholder="*" min="0" required>
+            </div><br><br>
+            <div class="elem-group inlined">
+              <label for="checkin-date" style="color:#f1eded;">Booking Date</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <input type="date" id="Booking-date" name="Booking" required>
+            </div><br><br>
+            <div class="elem-group inlined">
+              <label for="checkout-date" style="color:#f1eded;">Time</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <input type="time" id="Booking Time" name="Time" required>
+            </div><br><br>
+            <div class="elem-group">
+              <label for="Table-selection" style="color:#f1eded;">Select Time Preference</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <select id="Table-selection" name="Time_preference" required>
+                  <option value="">Choose a Preference from the List</option>
+                  <option value="connecting">Morning</option>
+                  <option value="adjoining">Afternoon</option>
+                  <option value="adjacent">Evening</option>
+              </select>
+            </div><br><br>
+            <div class="elem-group">
+              <label for="message" style="color:#f1eded;">Anything Else?</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <textarea id="message" name="visitor_message" placeholder="Tell us anything else that might be important." required></textarea>
+            </div><br><br>
+            <button type="submit" >Book The Table</button>
+          </form>
+        </strong>
+        </center><br><br><br><br><br>
+        <center><h2 style="color:rgb(255, 200, 81)"><b><u>Follo Us On</u></b></h2></center>
+        <center>
+            <a href="tel:123-456-7890"><i style="font-size:27px" class="fa">&#xf095;</i></a>
+            <a href="#" class="fa fa-facebook"></a>
+            <a href="#" class="fa fa-twitter"></a>
+            <a href="#" class="fa fa-google"></a>
+            <a href="#" class="fa fa-youtube"></a>
+            <a href="#" class="fa fa-instagram"></a>
+            </center>
+    </body>
+</html>
